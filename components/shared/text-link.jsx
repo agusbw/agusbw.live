@@ -1,13 +1,13 @@
 import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
-const TextLink = ({ href, children, className }) => {
+const baseClass =
+  "transition-colors duration-100 text-lowContrast hover:text-highContrast";
+
+const TextLink = ({ href, children, className, ...props }) => {
   return (
     <Link
-      className={twMerge(
-        "transition-colors duration-100 text-lowContrast hover:text-highContrast",
-        className
-      )}
+      className={twMerge(baseClass, className)}
       href={href}
     >
       {children}
