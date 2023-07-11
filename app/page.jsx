@@ -1,5 +1,10 @@
 import Image from "next/image";
+import Hero from "../components/home/hero";
 
 export default function Home() {
-  return <h1>Ini Halaman Home</h1>;
+  return (
+    <section>
+      <Hero />
+    </section>
+  );
 }
