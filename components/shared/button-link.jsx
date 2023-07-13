@@ -2,7 +2,7 @@ import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
 const baseClass =
-  "bg-primary p-4 border border-bdr hover:scale-90 trasition-transform duration-300 rounded";
+  "bg-primary block p-4 border border-bdr hover:scale-90 trasition-transform duration-300 rounded";
 
 const ButtonLink = ({ isExternal, href, className, children, ...props }) => {
   if (isExternal) {

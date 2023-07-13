@@ -1,6 +1,6 @@
 import Image from "next/image";
 import ButtonLink from "../shared/button-link";
-import profilePic from "/assets/images/profile-picture.png";
+import profilePic from "/assets/images/profile-picture.webp";
 
 const ProfilePicture = () => {
   return (
@@ -22,12 +22,11 @@ const Hero = () => {
       <p>
         Hi, I&apos;m Bewe 👋🏻 <br /> Front-end Developer
       </p>
-      <h1 className="inline-block text_gradient max-w-[650px] px-4 sm:px-0 bg-gradient-to-r">
+      <p className="inline-block text_gradient bg-300% animate-gradient max-w-[650px] px-4 sm:px-0 bg-gradient-to-r text-4xl md:text-6xl">
         Building modern and user-friendly Front-end Experience.
-      </h1>
+      </p>
       <ButtonLink
         href={"/about"}
-        isExternal={false}
         className="mt-4 w-60"
       >
         More about me...

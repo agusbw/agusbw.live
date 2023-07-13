@@ -2,12 +2,13 @@ import "../styles/globals.css";
 import { Outfit } from "next/font/google";
 import TopNavigation from "@/components/layout/top-navigation";
 import PageFooter from "@/components/layout/page-footer";
+import appConfig from "@/config/appConfig";
 
 const inter = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Agus BW",
-  description: "Nyoman Agus Budhiarta Waisnawa / Bewe's personal website",
+  title: appConfig.title,
+  description: appConfig.description,
 };
 
 export default function RootLayout({ children }) {

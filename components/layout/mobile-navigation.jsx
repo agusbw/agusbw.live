@@ -2,11 +2,13 @@
 
 import TextLink from "../shared/text-link";
 import { useState } from "react";
+import SiteLogo from "../shared/site-logo";
 
 const HamburgerMenu = ({ handleNavToggle }) => {
   return (
     <button
       className="p-3 rounded-md focus:outline outline-bdr"
+      aria-label="mobile navigation toggle"
       onClick={handleNavToggle}
     >
       <div className="flex flex-col gap-1">
@@ -23,7 +25,7 @@ const HamburgerMenu = ({ handleNavToggle }) => {
   );
 };
 
-const MobileNavigation = () => {
+const MobileNavigation = ({ navMenu }) => {
   const [isNavigationOpen, setIsNavigationOpen] = useState(false);
 
   const handleNavToggle = () => {
@@ -31,21 +33,24 @@ const MobileNavigation = () => {
   };
 
   return (
-    <nav className="sticky top-0 py-2 mx-8 border-b sm:hidden backdrop-blur-lg border-b-bdr">
+    <nav className="sticky top-0 z-50 py-2 mx-4 border-b sm:hidden backdrop-blur-lg border-b-bdr">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-5">
-          <div className="flex items-center justify-center w-16 h-16 border-2 rounded-full cursor-pointer bg-primary text-md border-bdr">
-            <p>B W</p>
-          </div>
-          <TextLink href={"/"}>Get in touch</TextLink>
+          <SiteLogo />
+          <TextLink href={"/"}>Home</TextLink>
         </div>
         <div className="relative">
           <HamburgerMenu handleNavToggle={handleNavToggle} />
           {isNavigationOpen && (
             <div className="absolute right-0 flex flex-col items-end py-2 mt-2 border rounded-md ps-16 pe-2 border-bdr bg-base">
-              <TextLink href={"/about"}>About</TextLink>
-              <TextLink href={"/about"}>Projects</TextLink>
-              <TextLink href={"/about"}>Blog</TextLink>
+              {navMenu.map((menu) => (
+                <TextLink
+                  key={menu}
+                  href={"/" + menu.toLowerCase()}
+                >
+                  {menu}
+                </TextLink>
+              ))}
             </div>
           )}
         </div>

@@ -4,15 +4,64 @@
 
 @layer base {
   h1 {
-    @apply text-5xl sm:text-6xl;
+    @apply text-6xl;
+  }
+
+  h2 {
+    @apply text-5xl;
+  }
+
+  h3 {
+    @apply text-4xl;
+  }
+
+  h4 {
+    @apply text-3xl;
+  }
+
+  h5 {
+    @apply text-2xl;
+  }
+
+  h6 {
+    @apply text-xl;
+  }
+
+  p {
+    @apply text-lg;
   }
 }
 
 @layer components {
   .text_gradient {
-    @apply inline-block bg-gradient-to-r from-[#C0C0C0] to-[#7A7A7A] text-transparent bg-clip-text;
+    @apply bg-gradient-to-r from-[#d2d2d2] to-[#7A7A7A] text-transparent bg-clip-text;
   }
 }
 
 @layer utilities {
+}
+
+/* width */
+::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #161616;
+  border: 1px solid #242424;
+  border-radius: 40px;
+  height: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #444444;
+  border-radius: 40px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #373737;
 }
