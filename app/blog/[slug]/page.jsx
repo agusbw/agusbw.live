@@ -38,7 +38,7 @@ const Page = async ({ params }) => {
             DATE_FORMAT.options
           )}
         </p>
-        <div className="mx-auto mt-12 prose text-left prose-regular prose-a:no-underline hover:prose-a:underline">
+        <div className="mx-auto mt-12 prose text-left prose-regular prose-a:no-underline hover:prose-a:underline prose-img:md:max-w-md prose-img:mx-auto">
           {post.content}
           <div className="mt-12 text-left not-prose">
             <p>
