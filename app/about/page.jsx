@@ -4,7 +4,7 @@ import Container from "@/components/layout/container";
 const Page = () => {
   return (
     <section className="w-full mt-8 mb-24">
-      <Container>
+      <Container className="space-y-7">
         <h1 className="text_gradient">About.</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quia
