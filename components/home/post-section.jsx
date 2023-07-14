@@ -9,7 +9,7 @@ const PostSection = async () => {
   return (
     <section className="py-16 mx-auto text-center">
       <Container>
-        <p className="text-4xl text_gradient">Recent Posts</p>
+        <p className="mb-8 text-4xl text_gradient">Recent Posts</p>
         <PostList posts={posts} />
         {posts.length > 3 && (
           <ButtonLink
