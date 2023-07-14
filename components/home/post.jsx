@@ -24,9 +24,16 @@ const Post = ({ post, className }) => {
           DATE_FORMAT.options
         )}
       </p>
-      <div className="absolute bottom-0 right-0 flex gap-1 pb-4 pr-4">
+      <div className="absolute bottom-0 right-0 pb-4 pr-4">
         {tags.map((tag, index) => {
-          return <Badge key={index}>{tag}</Badge>;
+          return (
+            <Badge
+              className={"mr-1"}
+              key={index}
+            >
+              {tag}
+            </Badge>
+          );
         })}
       </div>
     </div>
