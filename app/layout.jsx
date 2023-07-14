@@ -1,4 +1,4 @@
-import "../styles/globals.css";
+import "@/styles/globals.css";
 import { Outfit } from "next/font/google";
 import TopNavigation from "@/components/layout/top-navigation";
 import PageFooter from "@/components/layout/page-footer";
