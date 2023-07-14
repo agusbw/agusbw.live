@@ -1,9 +1,10 @@
 import Divider from "@/components/shared/divider";
+import Container from "@/components/layout/container";
 
 const Page = () => {
   return (
     <section className="w-full mt-8 mb-24">
-      <div className="mx-4 space-y-7 sm:mx-20 lg:w-7/12 lg:mx-auto">
+      <Container>
         <h1 className="text_gradient">About.</h1>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quia
@@ -32,7 +33,7 @@ const Page = () => {
           ipsam perferendis aspernatur nemo fuga, beatae explicabo laboriosam
           libero similique commodi!
         </p>
-      </div>
+      </Container>
     </section>
   );
 };
