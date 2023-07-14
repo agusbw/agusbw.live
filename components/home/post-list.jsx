@@ -1,9 +1,6 @@
 import Post from "./post";
 
 const PostList = ({ posts }) => {
-  posts = posts.sort((a, b) => {
-    return new Date(b.created_at).getTime() - new Date(a.created_at).getTime()
-  })
   posts = posts.slice(0, 3);
   return (
     <div className="flex w-11/12 gap-8 px-5 py-8 mx-auto mt-4 mb-12 overflow-auto lg:py-4 lg:w-full">
