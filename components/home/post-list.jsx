@@ -7,9 +7,9 @@ const PostList = ({ posts }) => {
       {posts.length > 0 ? (
         posts.map((post) => (
           <Post
-            key={post.title}
+            key={post.slug}
             post={post}
-            className="flex-1 min-h-[132px] min-w-[320px] lg:min-w-[250px] max-w-[400px]"
+            className="flex-1 min-h-[132px] sm:min-w-[320px] lg:min-w-[250px] max-w-full sm:max-w-[400px]"
           />
         ))
       ) : (
