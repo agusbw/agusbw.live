@@ -5,7 +5,7 @@ import { DATE_FORMAT } from "@/constants";
 import { redirect } from "next/navigation";
 import { getTagArray } from "@/utils/function";
 import Badge from "@/components/shared/badge";
-import TextLink from "@/components/shared/text-link";
+import ButtonLink from "@/components/shared/button-link";
 
 export async function generateStaticParams() {
   const posts = await getAllPostsMeta();
@@ -58,12 +58,12 @@ const Page = async ({ params }) => {
                 </Badge>
               );
             })}
-            <TextLink
-              className={"block mt-3 underline w-fit"}
+            <ButtonLink
+              className={"mt-5 w-fit py-1.5"}
               href={"/blog"}
             >
               Read other posts...
-            </TextLink>
+            </ButtonLink>
           </div>
         </div>
       </Container>
