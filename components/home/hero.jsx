@@ -1,13 +1,12 @@
 import Image from "next/image";
-import ButtonLink from "../shared/button-link";
-import profilePic from "/assets/images/profile-picture.webp";
+import ButtonLink from "@/components/shared/button-link";
 
 const ProfilePicture = () => {
   return (
     <Image
       width={150}
       height={150}
-      src={profilePic}
+      src={"/images/profile-picture.webp"}
       className="rounded-full"
       alt="profile picture"
     />
