@@ -5,7 +5,7 @@ import { DATE_FORMAT } from "@/constants";
 import Badge from "../shared/badge";
 
 const baseClass =
-  "relative p-4 text-left transition-all border-2 hover:text-highContrast hover:scale-105 border-bdr";
+  "p-4 text-left transition-all border-2 hover:text-highContrast hover:scale-105 border-bdr";
 
 const Post = ({ post, className }) => {
   const tags = getTagArray(post.tags);
@@ -24,7 +24,7 @@ const Post = ({ post, className }) => {
           DATE_FORMAT.options
         )}
       </p>
-      <div className="absolute bottom-0 right-0 pb-4 pr-4">
+      <div className="flex flex-wrap items-end justify-end">
         {tags.map((tag, index) => {
           return (
             <Badge
