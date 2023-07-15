@@ -13,10 +13,10 @@ const HamburgerMenu = ({ handleNavToggle }) => {
     >
       <div className="flex flex-col gap-1">
         {Array(3)
-          .fill(undefined)
-          .map((v, i) => (
+          .fill([1, 2, 3])
+          .map((v) => (
             <span
-              key={i}
+              key={v}
               className="block after:h-[2px] rounded-lg after:block after:w-7 bg-lowContrast cursor-pointer"
             ></span>
           ))}
