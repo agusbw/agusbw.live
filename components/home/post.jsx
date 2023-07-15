@@ -1,6 +1,5 @@
 import TextLink from "next/link";
 import { twMerge } from "tailwind-merge";
-import { getTagArray } from "@/utils/function";
 import { DATE_FORMAT } from "@/constants";
 import Badge from "../shared/badge";
 
@@ -8,8 +7,6 @@ const baseClass =
   "p-4 text-left transition-all border-2 hover:text-highContrast hover:scale-105 border-bdr";
 
 const Post = ({ post, className }) => {
-  const tags = getTagArray(post.tags);
-
   return (
     <div className={twMerge(baseClass, className)}>
       <TextLink
@@ -25,7 +22,7 @@ const Post = ({ post, className }) => {
         )}
       </p>
       <div className="flex flex-wrap items-end justify-end">
-        {tags.map((tag, index) => {
+        {post.tags.map((tag, index) => {
           return (
             <Badge
               className={"mr-1"}

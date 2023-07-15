@@ -3,7 +3,6 @@ import "@/styles/highlight-js/github-dark.css";
 import Container from "@/components/layout/container";
 import { DATE_FORMAT } from "@/constants";
 import { redirect } from "next/navigation";
-import { getTagArray } from "@/utils/function";
 import Badge from "@/components/shared/badge";
 import ButtonLink from "@/components/shared/button-link";
 
@@ -17,15 +16,12 @@ export async function generateStaticParams() {
 
 const Page = async ({ params }) => {
   let post;
-
   try {
     post = await getPostBySlug(params.slug);
   } catch (err) {
     console.error(err);
     redirect("/");
   }
-
-  const tags = getTagArray(post.meta.tags);
 
   return (
     <section className="py-16 text-center">
@@ -48,7 +44,7 @@ const Page = async ({ params }) => {
                 DATE_FORMAT.options
               )}
             </p>
-            {tags.map((tag, index) => {
+            {post.meta.tags.map((tag, index) => {
               return (
                 <Badge
                   className={"mr-1"}
