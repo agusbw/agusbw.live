@@ -7,31 +7,33 @@ const Page = () => {
       <Container className="space-y-7">
         <h1 className="text_gradient">About.</h1>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt quia
-          fugiat delectus earum quos obcaecati enim molestiae ipsa quod magnam
-          tempore cumque, accusamus dolorem deleniti repellendus blanditiis
-          voluptatem ullam voluptates sed assumenda impedit id.
+          Greetings, world! Allow me to introduce myself: Nyoman Agus Budhiarta
+          Waisnawa, but you can call me Bewe. I&apos;m a passionate software
+          developer, specializing in cutting-edge web technologies and website
+          development.
         </p>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum vitae
-          deserunt, harum repellendus sit consequatur explicabo neque soluta
-          quam, nobis quae obcaecati eligendi optio, repellat sunt enim eos quos
-          aliquam nisi totam dignissimos ab. Veniam eos
+          My journey into the world of coding began in 2020 when I stumbled upon
+          a captivating programming video. I vividly remember the thrill of
+          creating my first project, a Python-based tic-tac-toe game. While
+          I&apos;ll admit that I leaned heavily on video tutorials at the time
+          (😂), the sense of accomplishment I felt was immense. Since then, my
+          fascination with coding has persisted, particularly in the realm of
+          frontend development.
+        </p>
+        <p>
+          At present, I&apos;m pursuing a degree in Institut Teknologi & Bisnis
+          STIKOM Bali. My daily routine revolves around completing college
+          assignments and embarking on personal projects that pique my interest.
+          Beyond coding, I love devouring technology articles, staying active on
+          social media, and cherishing quality time spent with my loved ones.
         </p>
         <Divider />
         <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Architecto
-          itaque repellat neque assumenda tempore, maxime dicta quae numquam
-          sint voluptatibus voluptates, ad enim hic? Maiores repudiandae,
-          corrupti neque totam delectus corporis earum inventore laborum a.
-          Iure, obcaecati molestias totam facilis vero laborum ratione,
-          voluptates inventore voluptas, ex nulla error alias molestiae placeat
-          corrupti itaque modi magni in commodi. Cumque ab atque qui, facilis
-          dolor cupiditate commodi accusamus, eveniet magni nulla voluptates
-          rem. Perspiciatis molestias vero incidunt omnis vitae quam cumque
-          minima eaque sequi consequuntur. Voluptates facere tenetur eum tempore
-          ipsam perferendis aspernatur nemo fuga, beatae explicabo laboriosam
-          libero similique commodi!
+          If you&apos;re seeking assistance for your project or organization,
+          I&apos;m more than happy to lend a hand. Feel free to reach out to me
+          through any of the social media platforms listed below. Let&apos;s
+          collaborate or simply connect and explore the possibilities together!
         </p>
       </Container>
     </section>
