@@ -12,14 +12,12 @@ const HamburgerMenu = ({ handleNavToggle }) => {
       onClick={handleNavToggle}
     >
       <div className="flex flex-col gap-1">
-        {Array(3)
-          .fill([1, 2, 3])
-          .map((v) => (
-            <span
-              key={v}
-              className="block after:h-[2px] rounded-lg after:block after:w-7 bg-lowContrast cursor-pointer"
-            ></span>
-          ))}
+        {[1, 2, 3].map((v) => (
+          <span
+            key={v}
+            className="block after:h-[2px] rounded-lg after:block after:w-7 bg-lowContrast cursor-pointer"
+          ></span>
+        ))}
       </div>
     </button>
   );
