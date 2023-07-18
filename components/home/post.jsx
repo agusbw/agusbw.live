@@ -1,6 +1,6 @@
 import TextLink from "next/link";
 import { twMerge } from "tailwind-merge";
-import { DATE_FORMAT } from "@/constants";
+import { dateFormatter } from "@/utils/functions";
 import Badge from "../shared/badge";
 
 const baseClass =
@@ -15,12 +15,7 @@ const Post = ({ post, className }) => {
       >
         {post.title}
       </TextLink>
-      <p className="mb-10 text-sm">
-        {new Date(post.created_at).toLocaleDateString(
-          DATE_FORMAT.locale,
-          DATE_FORMAT.options
-        )}
-      </p>
+      <p className="mb-10 text-sm">{dateFormatter(post.created_at)}</p>
       <div className="flex flex-wrap items-end justify-end">
         {post.tags.map((tag, index) => {
           return (
