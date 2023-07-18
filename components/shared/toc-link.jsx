@@ -5,11 +5,10 @@ import { twMerge } from "tailwind-merge";
 
 const baseClass = "";
 
-const ScrollableLink = ({ children, className, id, href, ...props }) => {
+const TOClink = ({ children, className, headingId, href, ...props }) => {
   const handleOnClick = (e) => {
     e.preventDefault();
-
-    const topOfElements = document.getElementById(id).offsetTop - 105;
+    const topOfElements = document.getElementById(headingId).offsetTop - 105;
     window.scroll({
       top: topOfElements,
       behavior: "smooth",
@@ -19,7 +18,6 @@ const ScrollableLink = ({ children, className, id, href, ...props }) => {
   return (
     <Link
       href={href}
-      id={id}
       className={twMerge(baseClass, className)}
       onClick={(e) => handleOnClick(e)}
       {...props}
@@ -28,4 +26,4 @@ const ScrollableLink = ({ children, className, id, href, ...props }) => {
     </Link>
   );
 };
-export default ScrollableLink;
+export default TOClink;

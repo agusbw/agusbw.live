@@ -1,4 +1,4 @@
-import ScrollableLink from "../shared/scrollable-link";
+import TOClink from "../shared/toc-link";
 import GithubSlugger from "github-slugger";
 
 const TableOfContents = ({ headings }) => {
@@ -15,13 +15,13 @@ const TableOfContents = ({ headings }) => {
               data-level={heading.level}
               className="data-[level=three]:pl-5 "
             >
-              <ScrollableLink
+              <TOClink
                 href={`#${heading.slug}`}
-                id={`${heading.slug}-link`}
+                headingId={heading.slug}
                 className={"hover:text-highContrast"}
               >
                 {heading.text}
-              </ScrollableLink>
+              </TOClink>
             </li>
           );
         })}

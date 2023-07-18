@@ -1,12 +1,12 @@
 import { AiOutlineLink } from "react-icons/ai";
-import ScrollableLink from "@/components/shared/scrollable-link";
+import TOClink from "@/components/shared/toc-link";
 
 const components = {
   h2: (props) => (
-    <ScrollableLink
+    <TOClink
       href={`#${props.id}`}
-      id={`${props.id}-link`}
       className="prose w-fit"
+      headingId={props.id}
     >
       <h2
         {...props}
@@ -15,14 +15,14 @@ const components = {
         <AiOutlineLink className="text-lowContrast hover:text-highContrast" />
         {props.children}
       </h2>
-    </ScrollableLink>
+    </TOClink>
   ),
 
   h3: (props) => (
-    <ScrollableLink
+    <TOClink
       href={`#${props.id}`}
-      id={`${props.id}-link`}
       className="prose w-fit"
+      headingId={props.id}
     >
       <h3
         {...props}
@@ -31,7 +31,7 @@ const components = {
         <AiOutlineLink className="text-lowContrast hover:text-highContrast" />
         {props.children}
       </h3>
-    </ScrollableLink>
+    </TOClink>
   ),
 };
 
