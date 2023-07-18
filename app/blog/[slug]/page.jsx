@@ -1,10 +1,11 @@
 import { getAllPostsMeta, getPostBySlug } from "@/lib/mdx/post";
 import "@/styles/highlight-js/github-dark.css";
 import Container from "@/components/layout/container";
-import { DATE_FORMAT } from "@/constants";
+import { dateFormatter } from "@/utils/functions";
 import { redirect } from "next/navigation";
 import Badge from "@/components/shared/badge";
 import ButtonLink from "@/components/shared/button-link";
+import TableOfContents from "@/components/blog/table-of-contents";
 
 export async function generateStaticParams() {
   const posts = await getAllPostsMeta();
@@ -26,41 +27,36 @@ const Page = async ({ params }) => {
   return (
     <section className="py-16 text-center">
       <Container>
-        <h3 className="text-highContrast">{post.meta.title}</h3>
-        <p className="mt-2">
-          Posted on{" "}
-          {new Date(post.meta.created_at).toLocaleDateString(
-            DATE_FORMAT.locale,
-            DATE_FORMAT.options
-          )}
-        </p>
-        <div className="mx-auto mt-12 prose text-left prose-regular prose-a:no-underline hover:prose-a:underline prose-img:md:max-w-md prose-img:mx-auto">
-          {post.content}
-          <div className="mt-12 text-left not-prose">
-            <p>
-              Last modified:{" "}
-              {new Date(post.meta.created_at).toLocaleDateString(
-                DATE_FORMAT.locale,
-                DATE_FORMAT.options
-              )}
+        <div className="gap-4 lg:flex">
+          <div>
+            <h1 className="text-4xl text-highContrast">{post.meta.title}</h1>
+            <p className="mt-2">
+              Posted on {dateFormatter(post.meta.created_at)}
             </p>
-            {post.meta.tags.map((tag, index) => {
-              return (
-                <Badge
-                  className={"mr-1"}
-                  key={index}
+            <div className="mx-auto mt-12 prose text-left prose-regular prose-a:no-underline hover:prose-a:underline prose-img:md:max-w-md prose-img:mx-auto">
+              {post.content}
+              <div className="mt-12 text-left not-prose">
+                <p>Last modified: {dateFormatter(post.meta.updated_at)}</p>
+                {post.meta.tags.map((tag, index) => {
+                  return (
+                    <Badge
+                      className={"mr-1"}
+                      key={index}
+                    >
+                      {tag}
+                    </Badge>
+                  );
+                })}
+                <ButtonLink
+                  className={"mt-5 w-fit py-1.5"}
+                  href={"/blog"}
                 >
-                  {tag}
-                </Badge>
-              );
-            })}
-            <ButtonLink
-              className={"mt-5 w-fit py-1.5"}
-              href={"/blog"}
-            >
-              Read other posts...
-            </ButtonLink>
+                  Read other posts...
+                </ButtonLink>
+              </div>
+            </div>
           </div>
+          <TableOfContents headings={post.headings} />
         </div>
       </Container>
     </section>
