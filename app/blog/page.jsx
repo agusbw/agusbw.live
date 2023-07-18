@@ -9,7 +9,8 @@ const Page = async () => {
   return (
     <section className="w-full mt-8 mb-24">
       <Container>
-        <h1 className="mb-12 text_gradient">Blog.</h1>
+        <h1 className="text_gradient">Blog.</h1>
+        <p className="mt-2 mb-10">My Thought Space: Where ideas find wings</p>
         <div>
           {posts.map((post) => {
             return (
