@@ -33,7 +33,7 @@ const Page = async ({ params }) => {
             <p className="mt-2">
               Posted on {dateFormatter(post.meta.created_at)}
             </p>
-            <div className="mx-auto mt-12 prose text-left prose-regular prose-a:no-underline hover:prose-a:underline prose-img:md:max-w-md prose-img:mx-auto">
+            <div className="mx-auto mt-12 prose text-left prose-regular prose-headings:m-0 prose-img:md:max-w-md prose-img:mx-auto">
               {post.content}
               <div className="mt-12 text-left not-prose">
                 <p>Last modified: {dateFormatter(post.meta.updated_at)}</p>

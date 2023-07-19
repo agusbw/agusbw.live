@@ -13,7 +13,7 @@ module.exports = {
         lowContrast: "#9A9A9A",
         primary: "#1A1A1A",
         bdr: "#242424",
-        codeBlockBackground: "#0D1117"
+        codeBlockBackground: "#0D1117",
       },
       keyframes: {
         animatedgradient: {
@@ -31,19 +31,19 @@ module.exports = {
       typography: ({ theme }) => ({
         regular: {
           css: {
-            '--tw-prose-body': theme('colors.lowContrast'),
-            '--tw-prose-headings': theme('colors.highContrast'),
-            '--tw-prose-lead': theme('colors.lowContrast'),
-            '--tw-prose-links': theme('colors.blue[600]'),
-            '--tw-prose-bold': theme('colors.highContrast'),
-            '--tw-prose-counters': theme('colors.highContrast'),
-            '--tw-prose-bullets': theme('colors.highContrast'),
-            '--tw-prose-hr': theme('colors.lowContrast'),
-            '--tw-prose-quotes': theme('colors.highContrast'),
-            '--tw-prose-quote-borders': theme('colors.lowContrast'),
-            '--tw-prose-captions': theme('colors.lowContrast'),
-            '--tw-prose-th-borders': theme('colors.bdr'),
-            '--tw-prose-td-borders': theme('colors.bdr'),
+            "--tw-prose-body": theme("colors.lowContrast"),
+            "--tw-prose-headings": theme("colors.highContrast"),
+            "--tw-prose-lead": theme("colors.lowContrast"),
+            "--tw-prose-links": theme("colors.cyan[400]"),
+            "--tw-prose-bold": theme("colors.highContrast"),
+            "--tw-prose-counters": theme("colors.highContrast"),
+            "--tw-prose-bullets": theme("colors.highContrast"),
+            "--tw-prose-hr": theme("colors.lowContrast"),
+            "--tw-prose-quotes": theme("colors.highContrast"),
+            "--tw-prose-quote-borders": theme("colors.lowContrast"),
+            "--tw-prose-captions": theme("colors.lowContrast"),
+            "--tw-prose-th-borders": theme("colors.bdr"),
+            "--tw-prose-td-borders": theme("colors.bdr"),
           },
         },
       }),
