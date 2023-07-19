@@ -1,37 +1,22 @@
 import { AiOutlineLink } from "react-icons/ai";
-import TOClink from "@/components/shared/toc-link";
+import MarkdownHeaderLink from "@/components/shared/markdown-header-link";
 
 const components = {
   h2: (props) => (
-    <TOClink
-      href={`#${props.id}`}
-      className="prose w-fit"
-      headingId={props.id}
-    >
-      <h2
-        {...props}
-        className="flex items-center gap-2 text-highContrast"
-      >
-        <AiOutlineLink className="text-lowContrast hover:text-highContrast" />
-        {props.children}
-      </h2>
-    </TOClink>
+    <MarkdownHeaderLink headingId={props.id}>
+      <div className="flex items-center gap-2">
+        <AiOutlineLink className="text-2xl text-lowContrast hover:text-highContrast" />
+        <h2 {...props} />
+      </div>
+    </MarkdownHeaderLink>
   ),
-
   h3: (props) => (
-    <TOClink
-      href={`#${props.id}`}
-      className="prose w-fit"
-      headingId={props.id}
-    >
-      <h3
-        {...props}
-        className="flex items-center gap-2 text-highContrast"
-      >
-        <AiOutlineLink className="text-lowContrast hover:text-highContrast" />
-        {props.children}
-      </h3>
-    </TOClink>
+    <MarkdownHeaderLink headingId={props.id}>
+      <div className="flex items-center gap-2">
+        <AiOutlineLink className="text-xl text-lowContrast hover:text-highContrast" />
+        <h3 {...props} />
+      </div>
+    </MarkdownHeaderLink>
   ),
 };
 
