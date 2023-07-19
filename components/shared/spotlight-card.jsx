@@ -52,7 +52,8 @@ const SpotlightCard = ({ children, className }) => {
         className={twMerge(
           "bg-base",
           "py-4 px-6 text-lowContrast",
-          "translate-z-[20px]"
+          "translate-z-[20px]",
+          "w-full h-full"
         )}
       >
         {children}
