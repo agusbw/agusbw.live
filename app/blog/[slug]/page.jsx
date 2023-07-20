@@ -29,11 +29,13 @@ const Page = async ({ params }) => {
       <Container>
         <div className="gap-4 lg:flex">
           <div>
-            <h1 className="text-4xl text-highContrast">{post.meta.title}</h1>
+            <h1 className="text-4xl font-semibold text_gradient">
+              {post.meta.title}
+            </h1>
             <p className="mt-2">
               Posted on {dateFormatter(post.meta.created_at)}
             </p>
-            <div className="mx-auto mt-12 prose text-left prose-regular prose-headings:m-0 prose-img:md:max-w-md prose-img:mx-auto">
+            <div className="mx-auto mt-12 text-left markdown_text">
               {post.content}
               <div className="mt-12 text-left not-prose">
                 <p>Last modified: {dateFormatter(post.meta.updated_at)}</p>
