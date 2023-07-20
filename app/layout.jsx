@@ -20,6 +20,11 @@ export default function RootLayout({ children }) {
           href="/favicon.ico"
           sizes="any"
         />
+        <script
+          async
+          src={process.env.NEXT_PUBLIC_UMAMI_URL}
+          data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+        ></script>
       </head>
       <body className={inter.className + " bg-base text-lowContrast"}>
         <TopNavigation />
