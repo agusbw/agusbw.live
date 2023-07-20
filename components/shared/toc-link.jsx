@@ -5,7 +5,7 @@ import Link from "next/link";
 import { twMerge } from "tailwind-merge";
 
 const baseClass =
-  "hover:text-highContrast pl-2 data-[level=three]:ml-3  relative before:content-[''] before:absolute before:inset-y-0.5 before:left-0 before:transition-all   before:duration-300 before:ease-out";
+  "hover:text-highContrast pl-2 data-[level=three]:ml-3 data-[level=four]:ml-6  relative before:content-[''] before:absolute before:inset-y-0.5 before:left-0 before:transition-all   before:duration-300 before:ease-out";
 
 function useHighlighted(id) {
   const observer = React.useRef();
@@ -24,7 +24,7 @@ function useHighlighted(id) {
       rootMargin: "0% 0% -80% 0px",
     });
 
-    const elements = document.querySelectorAll("h2, h3");
+    const elements = document.querySelectorAll("h2, h3, h4");
     elements.forEach((elem) => observer.current.observe(elem));
     return () => observer.current?.disconnect();
   }, []);
