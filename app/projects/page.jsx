@@ -4,6 +4,11 @@ import TextLink from "@/components/shared/text-link";
 import { getAllProjectMeta } from "@/lib/mdx/project";
 import appConfig from "@/config/appConfig";
 
+export const metadata = {
+  title: "Projects",
+  description: "Projects by Nyoman Agus Budhiarta Waisnawa",
+};
+
 const Page = async () => {
   const projects = await getAllProjectMeta();
 

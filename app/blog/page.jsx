@@ -3,6 +3,11 @@ import Container from "@/components/layout/container";
 import TextLink from "@/components/shared/text-link";
 import { DATE_FORMAT } from "@/constants";
 
+export const metadata = {
+  title: "Blog",
+  description: "Posts by Nyoman Agus Budhiarta Waisnawa",
+};
+
 const Page = async () => {
   const posts = await getAllPostsMeta();
 

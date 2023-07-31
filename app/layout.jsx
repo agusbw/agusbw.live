@@ -7,7 +7,10 @@ import appConfig from "@/config/appConfig";
 const inter = Outfit({ subsets: ["latin"] });
 
 export const metadata = {
-  title: appConfig.title,
+  title: {
+    template: `%s | ${appConfig.title}`,
+    default: appConfig.title,
+  },
   description: appConfig.description,
 };
 

@@ -1,6 +1,11 @@
 import Container from "@/components/layout/container";
 import AboutText from "@/components/about/about-text";
 
+export const metadata = {
+  title: "About",
+  description: "About Nyoman Agus Budhiarta Waisnawa",
+};
+
 const Page = () => {
   return (
     <section className="w-full mt-8 mb-24">
