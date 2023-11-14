@@ -1,5 +1,5 @@
 const appConfig = {
-  title: "AgusBW",
+  title: "Bewe's Site",
   description: "Nyoman Agus Budhiarta Waisnawa / Bewe's personal website",
   socials: {
     Twitter: "https://twitter.com/agusbw_",

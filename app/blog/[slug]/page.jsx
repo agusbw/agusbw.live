@@ -29,7 +29,7 @@ const Page = async ({ params }) => {
       <Container>
         <div className="gap-4 lg:flex">
           <div>
-            <h1 className="text-4xl font-semibold text_gradient">
+            <h1 className="text-4xl font-semibold text-highContrast">
               {post.meta.title}
             </h1>
             <p className="mt-2">

@@ -7,7 +7,7 @@ tags: ["#nextjs", "#markdown"]
 
 ## Introduction
 
-In this blog post, I'll explain about the markdown strategy that I use in making this website. This website was created using the NextJS Framework version 13 (app router) where static content management on this website such as blogs and projects uses markdown format. In the next section, I'll explain the details about the library I use and how it works.
+This website was created using the NextJS Framework version 13 (app router) where static content management on this website such as blogs and projects uses markdown format. In the next section, I'll explain the details about the library I use and how it works.
 
 ## Markdown Library
 
@@ -55,7 +55,7 @@ export const getPostBySlug = async (slug) => {
 };
 ```
 
-In the example above, I created a `getPostBySlug` function that returns metadata and content from the post. Frontmatter and content in the return value I got from the compileMDX method. **Note that compileMDX is an asynchronous method**
+In the example above, I created a `getPostBySlug` function that returns metadata and content from the post. Frontmatter and content in the return value I got from the compileMDX method.
 
 Now, your frontmatter and MDX content can be accessed from any component using those functions, both client and server components. Here is an example of accessing it on a server component in NextJS 13.
 

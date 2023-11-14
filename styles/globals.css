@@ -38,7 +38,7 @@
   }
 
   .markdown_text {
-    @apply prose prose-regular prose-code:after:content-[''] prose-code:before:content-[''] prose-headings:mt-3 prose-headings:mb-1 prose-p:my-3 prose-h2:text-3xl prose-h3:text-2xl prose-h4:text-xl prose-img:md:max-w-md prose-img:mx-auto;
+    @apply prose prose-regular prose-code:after:content-[''] prose-code:before:content-[''] prose-headings:mt-3 prose-headings:mb-1 prose-p:my-2 prose-p:text-base prose-p:text-lowContrast prose-h2:text-2xl prose-h3:text-xl prose-h4:text-lg prose-img:md:max-w-md prose-img:mx-auto prose-code:text-xs;
   }
 }
 

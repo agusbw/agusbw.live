@@ -34,7 +34,7 @@ module.exports = {
             "--tw-prose-body": theme("colors.lowContrast"),
             "--tw-prose-headings": theme("colors.highContrast"),
             "--tw-prose-lead": theme("colors.lowContrast"),
-            "--tw-prose-links": theme("colors.cyan[400]"),
+            "--tw-prose-links": theme("colors.yellow[400]"),
             "--tw-prose-bold": theme("colors.highContrast"),
             "--tw-prose-counters": theme("colors.highContrast"),
             "--tw-prose-bullets": theme("colors.highContrast"),
